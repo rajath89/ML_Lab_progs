@@ -13,7 +13,6 @@ df_tennis
 
 
 
-# In[6]:
 
 
 def entropy(probs):
@@ -31,17 +30,6 @@ total_entropy = entropy_of_list(df_tennis['PlayTennis'])
 print("Entropy of given PlayTennis Data Set:",total_entropy)
 
 
-# In[11]:
-
-
-def information_gain(df, split_attribute_name, target_attribute_name, trace=0):
-    df_split = df.groupby(split_attribute_name)
-    for name,group in df_split:
-        print(name)
-        print(group)
-
-
-# In[13]:
 
 
 def information_gain(df, split_attribute_name, target_attribute_name, trace=0):
@@ -89,11 +77,6 @@ def id3(df, target_attribute_name, attribute_names, default_class=None):
                           default_class)
             tree[best_attr][attr_val] = subtree
         return tree
-
-
-
-
-# In[22]:
 
 
 attribute_names = list(df_tennis.columns)
